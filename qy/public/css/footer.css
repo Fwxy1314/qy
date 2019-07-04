@@ -1,0 +1,90 @@
+.footer{
+    width:1920px;
+}
+/*1.页脚头部*/
+.footer-top{
+    background-color:#323232;
+}
+/*内部的区域 inner(内部的)*/
+.ftqy{
+   height: 230px;
+    padding-top: 30px;
+    padding-bottom:40px;
+    margin-left: 302.5px;
+    margin-right:302.5px;
+}
+/* ul 让元素在一行*/
+.gywm{
+    display: flex;
+    list-style: none;
+}
+/*对于a的调整*/
+.footer a{
+    color: #959595;
+    text-decoration: none;
+    font-size: 14px;
+}
+a:hover{
+    color:silver;
+    transition: all .5s ease-in-out;
+}
+ul.gywm>li{
+    padding-right:85px;
+}
+ul.gywm>li>ul>li:first-child{
+
+ }
+li>ul>li{
+    padding-bottom:7px;
+}
+li>ul>li:first-child{
+    padding-bottom:10px;
+    font-size: 15px;
+}
+li>ul>li:first-child>a{
+    font-weight:900;
+    font-size: 15px;
+    color:silver;
+}
+/*2.页脚底部*/
+.footer-bottom{
+    height:180px;
+    background-color:#242424;
+}
+.fbqy{
+    display: flex;
+    height:100px;
+    /*height: 40px;*/
+    margin-right: 65px;
+    margin-left: 65px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.fbqy>span{
+    width:70%;
+    color: #959595;
+    font-size: 12px;
+    margin-left:5px;
+    margin-right:5px;
+    vertical-align: middle;
+}
+.footer-bottom>.fbqy>a>img:last-child{
+    width:90px;
+    padding-left:5px;
+    border-radius:5px;
+}
+.fblj{
+    display: flex;
+    color: #3f3f3f;
+    height:60px ;
+    margin-left:65px;
+    margin-right:150px;
+}
+.fblj>p>a{
+    color:#3f3f3f;
+    font-size:11px;
+}
+.fblj>p>a:hover{
+    color:silver;
+    transition: all .5s ease-in-out;
+}

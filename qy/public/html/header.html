@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页头</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+   <!-- <style>
+        body{background: #cccccc}
+    </style>-->
+</head>
+<body>
+  <!--header-->
+  <div class="header">
+        <!--穷游logo图片-->
+    <div class="left">
+        <div class="logo">
+            <a href="JavaScript:;">
+                <img src="imgs/logo.png" title="穷游" alt=""/>
+            </a>
+        </div>
+        <!--头部导航栏nav-->
+        <div class="nav">
+            <ul>
+                <li><a href="JavaScript:;" title="目的地">目的地</a></li>
+                <li><a href="JavaScript:;" title="锦囊" >锦囊</a></li>
+                <li class="sq">
+                    <a href="JavaScript:;" title="社区">社区</a>
+                    <img src="imgs/xiajiantou.png" alt=""/>
+                    <div class="sqx" style="display: none">
+                        <img src="imgs/shangjiantou.png" alt=""/>
+                    </div>
+                </li>
+                <li><a href="JavaScript:;" title="小助手">行程助手</a></li>
+                <li><a href="JavaScript:;">商城</a></li>
+
+                <li><a href="JavaScript:;">独家深度</a></li>
+                <li class="qy">
+                    <a href="JavaScript:;" title="穷游App">穷游App</a>
+                    <img src="imgs/xiajiantou.png" alt=""/>
+                    <div class="qyx" style="display: none">
+                        <img src="imgs/shangjiantou.png" alt=""/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+         <!--<div class="search">-->
+              <!--<from>-->
+                  <!--<input type="text"/>-->
+                    <!--<a href="http://www.baidu.cn/">-->
+                       <!--<img src="imgs/sousuo.png" title="搜索" alt=""/>-->
+                    <!--</a>-->
+              <!--</from>-->
+         <!--</div>-->
+        <div class="login">
+            <a href="JavaScript:;"><img src="imgs/qq.png" alt="" style="width:21px;"/></a>
+            <a href="JavaScript:;"><img src="imgs/weibo.png" alt=""/></a>
+            <a href="JavaScript:;"><img src="imgs/weixin.png" alt=""/></a>
+            <a href="login1.html" target="_blank">登录</a>
+            <a href="register1.html" target="_blank">注册</a>
+        </div>
+      </div>
+    <div class="center">
+        <div class="top">
+            <a href="JavaScript:;">目的地</a>
+            <a href="JavaScript:;">做行程</a>
+            <a href="JavaScript:;">买折扣</a>
+            <a href="JavaScript:;">酒店</a>
+        </div>
+        <div class="bottom">
+            <form>
+                <input type="text" placeholder="你要去哪儿" id="nyqn">
+            </form>
+            <button>搜索</button>
+        </div>
+    </div>
+</div>
+
+    <!--轮播-->
+    <div id="container">
+        <div id="list" style="left: -600px;">
+              <a href="index.html"><img class="img" src="imgs/lunbo1.jpg" alt="5"></a>
+              <a href="index.html"><img class="img" src="imgs/lunbo2.jpg" alt="1"></a>
+              <a href="index.html"><img class="img" src="imgs/lunbo3.jpg" alt="2"></a>
+              <a href="index.html"><img class="img" src="imgs/lunbo4.jpg" alt="3"></a>
+              <a href="index.html"><img class="img" src="imgs/lunbo3.jpg" alt="4"></a>
+              <a href="index.html"><img class="img" src="imgs/lunbo1.jpg" alt="5"></a>
+              <a href="index.html"><img class="img" src="imgs/lunbo2.jpg" alt="1"></a>
+        </div>
+        <div id="buttons">
+              <span index="1" class="on"></span>
+              <span index="2"></span>
+              <span index="3"></span>
+              <span index="4"></span>
+              <span index="5"></span>
+        </div>
+            <a href="javascript:;" id="prev" class="arrow"></a>
+            <a href="javascript:;" id="next" class="arrow"></a>
+    </div>
+    <!--页头的底部-->
+  <div class="hb">
+    <div class="hb1">
+        <img src="imgs/0-1.jpg" alt="" style="width:740px;height:110px;"/>
+        <img src="imgs/0-2.jpg" alt="" style="width:400px;height:110px;"/>
+    </div>
+  </div>
+
+    <script>
+        window.onload = function () {
+            var list = document.getElementById("list");
+            var next = document.getElementById("next");
+            var prev = document.getElementById("prev");
+      
+            // 初始化图片的宽度和第一张图片的位置
+            var imgWidth = document.body.clientWidth;
+            var img = document.getElementsByClassName('img');
+            for (let i = 0; i < img.length; i++) {
+              img[i].style.width = imgWidth + 'px';
+            }
+            list.style.left = -imgWidth + 'px';
+      
+            window.onresize = function () { // 实时监听浏览器窗口大小
+              imgWidth = document.body.clientWidth;
+              for (let i = 0; i < img.length; i++) {
+                img[i].style.width = imgWidth + 'px';
+              }
+              list.style.left = -imgWidth + 'px';
+            }
+      
+            function animate (offset) {
+              // 获取的style.left是字符串，需要用parseInt()取整转化为数字**********是否要取负值
+              var newLeft = parseFloat(list.style.left) + offset;
+              if (newLeft < -imgWidth * 5) {
+                list.style.left = -imgWidth + "px";
+              } else if (newLeft > -imgWidth) {
+                list.style.left = -imgWidth * 5 + "px";
+              } else {
+                list.style.left = newLeft + "px";
+              }
+            }
+      
+            // 设置图片循环滚动
+            var timer;
+            function play () {
+              timer = setInterval(function () {
+                next.onclick();
+              },1500)
+            }
+            play();
+      
+            // 鼠标放在图片上时图片停止滚动     这里，我们需要对其DOM进行操作，所以需要获取整个轮播图区域
+            var container = document.getElementById('container');
+            function stop () {
+              clearInterval(timer);
+            }
+            container.onmouseover = stop;
+            container.onmouseout = play;
+      
+      
+            // 以上一个简单的轮播图做完了，接下来给轮播图加上一排小圆点
+            var buttons = document.getElementById("buttons").getElementsByTagName("span");
+            var index = 1;
+            function buttonsShow () {
+              // 这里需要清除之前的样式
+              for (var i = 0; i < buttons.length; i++) {
+                if (buttons[i].className === "on") {
+                  buttons[i].className = '';
+                }
+              }
+              // 数组从0开始，故index需要-1
+              buttons[index - 1].className = 'on';
+            }
+            prev.onclick = function () {
+              index -= 1;
+              if (index < 1) {
+                index = 5;
+              }
+              buttonsShow();
+              animate(imgWidth);
+            }
+            next.onclick = function () {
+              // 由于上边定时器的作用，index会一直递增下去，我们只有5个小圆点，所以需要做出判断
+              index += 1;
+              if (index > 5) {
+                index = 1;
+              }
+              buttonsShow();
+              animate(-imgWidth);
+            }
+            // 现在实现鼠标点击任意一个点，切换到相应的图片，原理是通过偏移量去找到对应的图片
+            for (let i = 0; i < buttons.length; i++) {
+              buttons[i].onclick = function () {
+                // 偏移量获取：这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法
+                // 由于这里的index是自定义属性，需要用到getAttribute()这个DOM 2级方法，去获取自定义index的属性
+                var clickIndex = parseInt(this.getAttribute('index'));
+                var offset = imgWidth * (index - clickIndex);
+                animate(offset); // 存放鼠标点击后的位置，用于小圆点的正常显示
+                index = clickIndex;
+                buttonsShow();
+              }
+            }
+          }
+    </script>
+</body>
+</html>

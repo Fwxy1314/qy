@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery-1.11.3.js"></script>
+    <title>欢迎注册</title>
+    <style>
+        body{
+            margin: 0;
+            border:0;
+            background-color: #ddd;
+        }
+        .register{
+            
+            top:100px;
+            position: relative;
+            width:1000px;height: 530px;
+            margin: 0 auto;
+            background-color:#fff;
+        }
+        .content{
+            width:320px;
+            height:470px;
+            margin: 0 auto;
+        }
+        .header{
+            font-size: 30px;
+            color: #373d41;
+            padding-top:30px;
+            text-align: center;
+        }
+        .content_from{
+            color: #373d41;
+            font-size: 12px;
+            font-family: "Helvetica,Arial,Verdana,PingFang SC,Microsoft YaHei";
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+        .from_item{
+            display: inline-table;
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+       .content_from .input{
+           border-color: #ff6428;   
+       }
+       .from_item .input{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0 8px;
+        color: #373d41;
+        font-size: 14px;
+        font-weight: 400;
+        outline: none;
+        overflow: visible;
+        border: 1px solid #c3c5c6;
+        box-sizing: border-box;
+        background: #fff;
+        vertical-align: baseline;
+        transition: all .3s ease-out;
+    }
+   
+    .from_item .input:hover{
+        border-color:#00c1de; 
+    }
+    /*验证码框的样式*/
+    .from_item_test{
+        position: absolute;
+        display:inline-table;   
+        width:320px;
+        height:40px;
+    }
+    .from_item_test .test_input{
+        position: relative;
+        top:-15px;
+        width: 100px;
+        height: 40px;
+    }
+    .test_img{ 
+        margin-left: 7px;
+    }
+    /*对看不清，换一张的调整*/
+    .text_a{
+        position: relative;
+        display: table-cell;
+        width: 90px;
+        height: 40px;
+        top:-13px;
+    }
+    a{
+        text-decoration:none;
+    }
+    a:link{
+        color:#00c1de;
+    }
+    /*注册按钮*/
+    .from_item_btn{
+        width:100%;
+        height:40px;
+        margin: 0;
+        border: 0;
+        padding: 0 20px;
+        background-color: #00c1de;
+        color: #fff;
+        font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+     <!---->
+    <div class="register">
+        <div class="content">
+            <div class="header">欢迎注册穷游网</div>
+            <!--form表单-->
+            <form class="content_from">
+                 <!--设置会员名-->
+                <div class="from_item">
+                    <input class="input" type="text" name="uname" id="uname" placeholder="设置会员名" maxlength="10">
+                    <!--<div class="from_item_">账号不能为空！</div>-->
+                </div>
+                <!--设置登录密码-->
+                <div class="from_item">
+                        <input class="input" type="password" name="upwd" id="upwd" placeholder="设置登录密码" maxlength="16">
+                       <!-- <div class="from_item_">密码不能为空！</div>-->
+                </div>
+                <!--请在次输入密码-->
+                <div class="from_item">
+                        <input class="input" type="password" id="repateUpwd" placeholder="请再次输入密码" maxlength="16">
+                       <!-- <div class="from_item_">密码不能为空！</div>-->
+                </div>
+                <!--请输入手机号-->
+                <div class="from_item">
+                    <input class="input" type="password"  id="phone" name="phone" placeholder="请输入手机号码" maxlength="11" required="">
+                </div>
+                <!--验证码-->
+                <div class="from_item">
+                    <div class="from_item_test">
+                        <input class="input test_input" type="text" name="yzm">
+                        <img src="imgs/00_code1.png" width="120px" height="40px" class="test_img" alt="1">
+                        <a href="javascript:;" class="text_a">看不清，换一张</a>
+                    </div>
+                </div>
+                <div class="from_item">
+                    <button class="from_item_btn">立即注册</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        //单击验证码        
+        $("img").click(function(){
+            var $img=$(this);
+            //修改元素
+            var n=parseInt($img.attr("alt"));
+          //  console.log(n)
+            n<15?n++:n=1;
+            $img.attr({src:`imgs/00_code${n}.png`,alt:n})
+        })
+    </script>
+</body>
+</html>

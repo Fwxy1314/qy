@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>欢迎注册</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        #dlbj{
+            width: 100%;
+            height: 779px;
+            background: url("imgs/bj.jpg") no-repeat;
+            background-size:cover ;
+            border-top:1px solid transparent ;
+        }
+        #dlbj div.zcjm{
+            width:380px;
+            min-height: 600px;
+            margin: 50px auto;
+
+        }
+        #dlbj div.zcyt{
+            text-align: center;
+            font-size: 26px;
+            color: white;
+            vertical-align: bottom;
+            margin: 60px 0;
+        }
+        #dlbj div.zcyt img{
+            width: 127px;
+            height: 46px;
+            vertical-align: bottom;
+        }
+        #dlbj div.zcbd{
+            background: #FEFAF9;
+            min-height: 300px;
+        }
+        #dlbj div.zcbd form{
+            padding: 35px 25px 25px 25px;
+        }
+        #dlbj div.zcbd form input:first-child{
+            width: 42px;
+            height: 39px;
+            padding: 0 24px 0 10px;
+            border: 1px solid #ddd;
+            background: white;
+        }
+        #dlbj div.zcbd form input:nth-child(2){
+            width:212px;
+            height:38px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        #dlbj div.zcbd form input:nth-child(4){
+            width:180px;
+            height:38px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        #dlbj div.zcbd form img{
+            vertical-align: bottom;
+        }
+        #dlbj div.zcbd form input:nth-child(7){
+            width:180px;
+            height:38px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        #dlbj div.zcbd form button:nth-child(8){
+            width: 110px;
+            height: 40px;
+            font-size: 14px;
+            color: white;
+            background: #5CAD77;
+            border-radius: 4px;
+            border: 0;
+        }
+        #dlbj div.zcbd form input:nth-child(10),input:nth-child(12){
+            width:298px;
+            height:38px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        #dlbj div.zcbd form div.bdyz{
+            width: 100%;
+            height: 30px;
+            color: #FF654C;
+            font-size: 12px;
+            line-height: 30px;
+        }
+        #dlbj div.zcbd form div.bdyz img{
+            vertical-align:middle;
+        }
+        #dlbj div.zcbd form input.zc{
+            width: 100%;
+            height:38px;
+            font-size: 18px;
+            color: white;
+            background: #5CAD77;
+            border-radius: 4px;
+            border: 0;
+        }
+        #dlbj div.zcbd div.qyzh{
+            width: 330px;
+            text-align: center;
+            margin: 0 auto;
+            padding-bottom: 40px;
+            font-size: 14px;
+
+        }
+        #dlbj div.zcbd div.qyzh div:first-child{
+            float: right;
+        }
+        #dlbj div.zcbd div.qyzh div:last-child{
+            float: left;
+        }
+        div.qyzh div span{
+            color: #959595;
+        }
+        div.qyzh div a{
+            text-decoration: none;
+            color: #3F9F5F;
+        }
+        #dldb{
+            width: 100%;
+            min-height: 200px;
+            background:#363636 ;
+            border-top:1px solid transparent ;
+        }
+        #dldb div.zpzw{
+            width: 980px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        #dldb ul.jrqy{
+            display: flex;
+            padding-left: 0px;
+            list-style: none;
+        }
+        #dldb ul.jrqy li{
+            list-style: none;
+        }
+        #dldb ul.jrqy li ul{
+            padding: 0px 60px 0 0;
+            font-size: 14px;
+        }
+        #dldb ul.jrqy li ul li{
+            padding: 0 0 0 20px;
+            margin-bottom: 10px;
+
+        }
+
+        #dldb ul.jrqy li ul li a{
+            color: silver;
+            transition: all 1s linear;
+            text-decoration: none;
+            font-family: Hiragino Sans GB,Microsoft YaHei,SimHei,SimSun,sans-serif; ;
+        }
+        #dldb ul.jrqy li ul li:not(:first-child){
+            color: #818181;
+            font-size: 12px;
+        }
+        #dldb ul.jrqy li ul li a:hover{
+            color: white;
+        }
+        #dldb li.gzwm a{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 0px 0;
+        }
+        #dldb li.gzwm a:first-child{
+            background: url(img/image/jlt-01.png) 0 -1080px no-repeat;
+        }
+        #dldb li.gzwm a:nth-child(2){
+            background: url(img/image/jlt-01.png) -30px -1080px no-repeat;
+        }
+        #dldb li.gzwm a:nth-child(3){
+            background: url(img/image/jlt-01.png) -60px -1080px no-repeat;
+        }
+        #dldb li.gzwm-01 a{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 10px 0;
+        }
+        #dldb li.gzwm-01 a:first-child{
+            background: url(img/image/jlt-01.png) 0 -1110px no-repeat;
+        }
+        #dldb li.gzwm-01 a:nth-child(2){
+            background: url(img/image/jlt-01.png) -30px -1110px no-repeat;
+        }
+        #dldb li.gzwm-01 a:nth-child(3){
+            background: url(img/image/jlt-01.png) -60px -1110px no-repeat;
+        }
+        #dldb li.appo{
+            width: 135px;
+            height: 40px;
+            background: url(img/image/jlt-01.png) 0 -74px no-repeat
+        }
+        #zcfw{
+            padding: 20px 0 0 20px;
+            display: flex;
+        }
+        #zcfw div p{
+            margin: 0 0 10px 10px;
+            color:#818181;
+            font-size: 13px;
+
+        }
+        /*#s01{*/
+            /*background:url('img/image/duigou.png') 221px 11px no-repeat;*/
+            /*display: none;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div id="dlbj">
+        <div class="zcjm">
+            <div class="zcyt">
+                <img src="imgs/f_qy.jpg" alt=""/>
+                注册
+            </div>
+            <div class="zcbd">
+                <form action="#">
+                    <input type="text" value="86" disabled/>
+                    <input type="text" name="phone"placeholder="输入用于登录的手机号码" id="s01"/>
+                    <div class="bdyz"></div>
+                    <input type="text" placeholder="图片识别码"/>
+                    <img src="imgs/00_code1.png" width="110px" height="40px"/>
+                    <div class="bdyz"></div>
+                    <input type="text" placeholder="输入短信中的验证码"/>
+                    <button id="a1">发送验证码</button>
+                    <div class="bdyz"></div>
+                    <input type="text" placeholder="起一个具有识别度的用户名" id="s2" name="uname"/>
+                    <div class="bdyz bdyz-01" id="unameTip"></div>
+                    <input type="password" placeholder="输入8-16位密码，需包含字母及数字" id="p2" name="upwd"/>
+                    <div class="bdyz"></div>
+                    <input type="button" value="注&nbsp;册" class="zc" id="btn1"/>
+                </form>
+                <div class="qyzh">
+                    <div>
+                        <span>同意</span>
+                        <a href="#">会员条款</a>
+                        <span>和</span>
+                        <a href="#">免责声明</a>
+                    </div>
+                    <div>
+                        <span>已有穷游帐号？</span>
+                        <a href="login1.html" target="_blank">登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dldb">
+        <div class="zpzw">
+            <ul class="jrqy">
+                <li>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">穷游简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">加入穷游</a></li>
+                        <li><a href="#">招聘职位</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">网站条款</a></li>
+                        <li><a href="#">会员条款</a></li>
+                        <li><a href="#">社区指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">新手上路</a></li>
+                        <li><a href="#">使用帮助</a></li>
+                        <li><a href="#">网站地图</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">关注我们</a></li>
+                        <li class="gzwm">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </li>
+                        <li class="gzwm-01">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="appo"></li>
+            </ul>
+            <div id="zcfw">
+                <div>
+                    <img src="imgs/f_qy.jpg" width="100px" height="36px" />
+                </div>
+                <div>
+                    <p>2004-2017 © 穷游网™ qyer.com All rights reserved.  京ICP备12003524号  京公网安备11010502023470
+                    </p>
+                    <p>
+                        穷游网为旅行者提供原创实用的出境游旅行指南和旅游攻略、旅行社区和问答交流平台，并提供签证、保险、机票、酒店预订、租车等服务。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script>
+        $("#s01").blur(function(check){  //手机
+            var $txtName=$("#s01");
+            var $s1=$("#s01").val();
+            var zz =/^1[3,5,7,8]\d{9}$/;
+            if(!zz.test($s1)){
+                $txtName.next().html("<img src='imgs/err.png'>&nbsp;请输入正确的手机号/邮箱/用户名");
+                $txtName.next().css("visibility","visible");
+                $("#s01").css("background","none");
+                check.preventDefault();
+            }else{
+                $("#s01").css("background","url('imgs/ok.png') 222px 11px no-repeat");
+                $txtName.next().css("visibility","hidden");
+            }
+        });
+        $("#s2").blur(function(check){ //用户名
+            var $txtName=$("#s2");
+            var $s1=$("#s2").val();
+            var zz =/^[A-Za-z0-9_\-\u4e00-\u9fa5]{3,15}$/;
+            if(!zz.test($s1)){
+                $txtName.next().html("<img src='imgs/err.png'>&nbsp;用户名必须介于3~15位之间!");
+                $txtName.next().css("visibility","visible");
+                $("#s2").css("background","none");
+                check.preventDefault();
+            }else{
+                $("#s2").css("background","url('imgs/ok.png') 308px 11px no-repeat");
+                $txtName.next().css("visibility","hidden");
+            }
+        });
+        $("#p2").blur(function(check){   //密码
+            var $txtPwd=$("#p2");
+            var $s1=$("#p2").val();
+            var zz =/^[a-zA-Z]\w{2,15}$/;
+            if(!zz.test($s1)){
+                $txtPwd.next().html("<img src='imgs/err.png'>&nbsp;密码需要3-15位，包含字母及数字!");
+                $txtPwd.next().css("visibility","visible");
+                $("#p2").css("background","none");
+                check.preventDefault();
+            }else{
+                $("#p2").css("background","url('imgs/ok.png') 308px 11px no-repeat");
+                $txtPwd.next().css("visibility","hidden");
+            }
+        });
+    </script>
+
+    <!--//AJAX事件-->
+    <script>
+        //2.5:通过验证，发送ajax请示 /reg.do
+        //2.6:并且接收服务器返回数据
+        $("#btn1").click(function(){
+        var u = $("#s2").val();
+        var p = $("#p2").val();
+        $.ajax({
+            type:"POST",
+            url:"/reg.do",
+            data:{s2:u,p2:p},
+            success:function(data){
+                if(data.code>0){
+                    alert(data.msg);
+                    location.href = "index.html";
+
+                }
+            },
+            error:function(){
+                alert("网络故障，请重试");
+            }
+
+        });
+        });
+
+
+    //    功能点二:判断注册的用户名是否存在
+
+        $("#s2").blur(function(){
+            //1:获取用户输入用户名
+            var u = this.value;
+            //2:发送ajax请求 /existsuname
+            $.ajax({
+                url:"/existsuname",
+                data:{s2:u},
+                success:function(data){
+                    //3:获取返回结果
+                    //code 1   欢迎使用
+                    //code:-1  该用户己被占用
+                    if(data.code==1){
+                        $("div.bdyz-01").html(data.msg);
+                        $("div.bdyz-01").css("visibility","visible");
+
+                    }else{
+                        $("div.bdyz-01").html(data.msg);
+                        $("div.bdyz-01").css("visibility","visible");
+                        $("#s2").css("background","none");
+                    }
+                }
+            });
+        });
+
+        //功能模块三 :用户登录
+
+
+
+
+
+        //	      s2.onblur = function(){
+//     //3:获取用户名
+//     var u = s2.value;
+//     //4:发送AJAX请求
+//
+//    var xhr = new XMLHttpRequest();
+//    xhr.onreadystatechange = function(){
+//     //5:获取服务器返回数据保存unameTip标签中间
+//     if(xhr.readyState===4&&xhr.status===200){
+//       alert(xhr.responseText)
+//     }
+//    }
+//    xhr.open("GET","qyzc-01.php?s2="+u,true);
+//    xhr.send(null);
+//    }
+//
+//	     btn1.onclick=function(){
+//            var u=s2.value;
+//           var p=p2.value;
+//           var xhr=new XMLHttpRequest();
+//             xhr.onreadystatechange = function(){
+//       if(xhr.readyState===4&&xhr.status===200){
+//           var html = xhr.responseText;
+//           alert(xhr.responseText)
+//       }
+//     }
+//            xhr.open("GET","qyzc.php?s2="+u+"&p2="+p,true);
+//            xhr.send(null);
+//       }
+    </script>
+</body>
+</html>

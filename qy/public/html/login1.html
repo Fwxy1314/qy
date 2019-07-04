@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>欢迎登录</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        #dlbj{
+            width: 100%;
+            height: 779px;
+            background: url("imgs/bj.jpg") no-repeat;
+            background-size:cover ;
+            border-top:1px solid transparent ;
+        }
+        #dlbj div.zcjm{
+            width:380px;
+            min-height: 600px;
+            margin: 50px auto;
+
+        }
+        #dlbj div.zcyt{
+            text-align: center;
+            font-size: 26px;
+            color: white;
+            vertical-align: bottom;
+            margin: 60px 0;
+        }
+        #dlbj div.zcyt img{
+            width: 127px;
+            height: 46px;
+            vertical-align: bottom;
+        }
+
+        #dldb{
+            width: 100%;
+            min-height: 200px;
+            background:#363636 ;
+            border-top:1px solid transparent ;
+        }
+        #dldb div.zpzw{
+            width: 980px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        #dldb ul.jrqy{
+            display: flex;
+            padding-left: 0px;
+            list-style: none;
+        }
+        #dldb ul.jrqy li{
+            list-style: none;
+        }
+        #dldb ul.jrqy li ul{
+            padding: 0px 60px 0 0;
+            font-size: 14px;
+        }
+        #dldb ul.jrqy li ul li{
+            padding: 0 0 0 20px;
+            margin-bottom: 10px;
+
+        }
+
+        #dldb ul.jrqy li ul li a{
+            color: silver;
+            transition: all 1s linear;
+            text-decoration: none;
+            font-family: Hiragino Sans GB,Microsoft YaHei,SimHei,SimSun,sans-serif; ;
+        }
+        #dldb ul.jrqy li ul li:not(:first-child){
+            color: #818181;
+            font-size: 12px;
+        }
+        #dldb ul.jrqy li ul li a:hover{
+            color: white;
+        }
+        #dldb li.gzwm a{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 0px 0;
+        }
+        #dldb li.gzwm a:first-child{
+            background: url(img/image/jlt-01.png) 0 -1080px no-repeat;
+        }
+        #dldb li.gzwm a:nth-child(2){
+            background: url(img/image/jlt-01.png) -30px -1080px no-repeat;
+        }
+        #dldb li.gzwm a:nth-child(3){
+            background: url(img/image/jlt-01.png) -60px -1080px no-repeat;
+        }
+        #dldb li.gzwm-01 a{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px 10px 0;
+        }
+        #dldb li.gzwm-01 a:first-child{
+            background: url(img/image/jlt-01.png) 0 -1110px no-repeat;
+        }
+        #dldb li.gzwm-01 a:nth-child(2){
+            background: url(img/image/jlt-01.png) -30px -1110px no-repeat;
+        }
+        #dldb li.gzwm-01 a:nth-child(3){
+            background: url(img/image/jlt-01.png) -60px -1110px no-repeat;
+        }
+        #dldb li.appo{
+            width: 135px;
+            height: 40px;
+            background: url(img/image/jlt-01.png) 0 -74px no-repeat
+        }
+        #zcfw{
+            padding: 20px 0 0 20px;
+            display: flex;
+        }
+        #zcfw div p{
+            margin: 0 0 10px 10px;
+            color:#818181;
+            font-size: 13px;
+        }
+        #dlbj div.zcbd{
+            background: #FEFAF9;
+            min-height: 300px;
+            padding: 5px 25px;
+        }
+        #dlbj div.zcbd form{
+            padding: 20px 0;
+        }
+        #zhdl div.dxkjdl{
+            display: flex;
+        }
+        #zhdl div.dxkjdl>div{
+            width: 165px;
+            height: 60px;
+            color: #3F9F5F;
+            border-bottom: 2px solid #3F9F5F;
+            font-size: 17px;
+            line-height: 60px;
+            text-align: center;
+            cursor:pointer;
+        }
+        #zhdl div.dxkjdl div:last-child{
+            color:#323232;
+            border-bottom: 2px solid #E8E8E8;
+        }
+        #zhdl #dlform a.sjsm{
+            color:#3F9F5F ;
+            font-size: 15px;
+            text-decoration: none;
+        }
+        #zhdl #dlform>span{
+            font-size: 15px;
+            color:#959595;
+        }
+        #zhdl #dlform input{
+            width: 310px;
+            padding-right: 20px;
+            height: 38px;
+            font-size: 14px;
+            padding-left: 5px;
+            border: 1px solid #D7D7D7;
+          }
+        #zhdl #dlform #s01{
+            margin-top:30px ;
+        }
+        #dlbj  div.bdyz{
+            width: 100%;
+            height: 30px;
+            color: #FF654C;
+            font-size: 12px;
+            line-height: 30px;
+        }
+        #dlbj  div.bdyz img{
+            vertical-align:middle;
+            margin-bottom: 5px;
+        }
+        #zhdl #dlform input.dl{
+            width: 100%;
+            height: 38px;
+            font-size: 18px;
+            color: white;
+            background: #5CAD77;
+            border-radius: 4px;
+            border: 0;
+        }
+        #zhdl div.xtb ul{
+            display: flex;
+            list-style: none;
+            justify-content:space-around;
+            padding-left: 0px;
+            margin-top: 0px;
+        }
+        #zhdl div.xtb ul li a{
+            display: flex;
+            width: 40px;
+            height: 40px;
+        }
+       /*  #zhdl div.xtb ul.ppt li:first-child a{
+            background: url(img/image/qq1.jpg) no-repeat;
+        }
+        #zhdl div.xtb ul.ppt li:first-child a:hover{
+            background: url(img/image/qq2.jpg) no-repeat;
+        }
+        #zhdl div.xtb ul.ppt li:nth-child(2) a{
+            background: url(img/image/weibo1.jpg) no-repeat;
+        }
+        #zhdl div.xtb ul.ppt li:nth-child(2) a:hover{
+            background: url(img/image/weibo2.jpg) no-repeat;
+        }
+        #zhdl div.xtb ul.ppt li:nth-child(3) a{
+            background: url(img/image/taobao1.jpg) no-repeat;
+        }
+        #zhdl div.xtb ul.ppt li:nth-child(3) a:hover{
+            background: url(img/image/taobao2.jpg) no-repeat;
+        }
+        #zhdl div.xtb ul.ppt li:last-child a{
+            background: url(img/image/weixin1.jpg) no-repeat;
+        }
+        #zhdl div.xtb ul.ppt li:last-child a:hover{
+            background: url(img/image/weixin2.jpg) no-repeat;
+        } */
+        #zhdl div.mysjh{
+            margin-bottom: 20px;
+        }
+        #zhdl div.mysjh div:first-child{
+            float: right;
+        }
+        #zhdl div.mysjh div:first-child a{
+            font-size: 13px;
+            text-decoration: none;
+            color:#A1A095 ;
+        }
+        #zhdl div.mysjh div:first-child a:hover{
+            color: #3F9F5F;
+        }
+        #zhdl div.mysjh div:last-child span{
+            color:#A1A095 ;
+            font-size: 13px;
+        }
+        #zhdl div.mysjh div:last-child a{
+            color: #3F9F5F;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        #dlbj div.zcbd #dlform-01{
+            display: none;
+        }
+        #dlbj div.zcbd #dlform-01 input:first-child{
+            width: 42px;
+            height: 39px;
+            padding: 0 24px 0 10px;
+            border: 1px solid #ddd;
+            background: white;
+        }
+        #dlbj div.zcbd #dlform-01 input:nth-child(2){
+            width:212px;
+            padding-right: 20px;
+            height:38px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+        #dlbj div.zcbd #dlform-01 input:nth-child(4){
+            width:200px;
+            height:38px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+        #dlbj div.zcbd #dlform-01 img{
+            vertical-align: bottom;
+        }
+        #dlbj div.zcbd #dlform-01 input:nth-child(6){
+            width:200px;
+            height:38px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            margin-top: 30px;
+            padding-left: 10px;
+        }
+        #dlbj div.zcbd #dlform-01 button:nth-child(7){
+            width: 110px;
+            height: 40px;
+            font-size: 14px;
+            color: white;
+            background: #5CAD77;
+            border-radius: 4px;
+            border: 0;
+        }
+        #dlbj div.zcbd #dlform-01 input.zc{
+            width: 100%;
+            height:38px;
+            font-size: 18px;
+            color: white;
+            background: #5CAD77;
+            border-radius: 4px;
+            border: 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dlbj">
+        <div class="zcjm">
+            <div class="zcyt">
+                <img src="imgs/f_qy.jpg" alt=""/>
+                登录
+            </div>
+            <div class="zcbd">
+                <div id="zhdl">
+                    <div class="dxkjdl">
+                        <div id="delu">账号登录</div>
+                        <div id="delu-01">短信快捷登录</div>
+                    </div>
+                    <form action="#" id="dlform">
+                        <span>关于穷游网将实行</span>
+                        <a href="#" class="sjsm">手机绑定实名制的说明</a>
+                        <input id="s01" type="text" name="0" placeholder="手机号/邮箱/用户名" />
+                        <div class="bdyz"></div>
+                        <input type="password" name="1" placeholder="密码" id="s001"/>
+                        <div class="bdyz"></div>
+                        <input type="button" value="登&nbsp;录" class="dl" id="btn"/>
+                    </form>
+                    <form action="#" id="dlform-01">
+                        <input type="text" value="86" disabled/>
+                        <input type="text" id="s02"/>
+                        <div class="bdyz"></div>
+                        <input type="text" placeholder="图片识别码"/>
+                        <img src="imgs/00_code6.png" width="110px" height="40px"/>
+                        <input type="text" placeholder="输入短信中的验证码"/>
+                        <button id="a1">发送验证码</button>
+                        <input type="button" value="登&nbsp;录" class="zc" id="btn1"/>
+                    </form>
+                   <!-- <div class="xtb">
+                        <ul class="ppt">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div> -->
+                    <div class="mysjh">
+                        <div>
+                            <a href="#">境外手机号登录</a>
+                        </div>
+                        <div >
+                            <span>没有穷游手机号？</span>
+                            <a href="register1.html" target="_blank">立即注册</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dldb">
+        <div class="zpzw">
+            <ul class="jrqy">
+                <li>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">穷游简介</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">合作伙伴</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">加入穷游</a></li>
+                        <li><a href="#">招聘职位</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">网站条款</a></li>
+                        <li><a href="#">会员条款</a></li>
+                        <li><a href="#">社区指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">新手上路</a></li>
+                        <li><a href="#">使用帮助</a></li>
+                        <li><a href="#">网站地图</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="#">关注我们</a></li>
+                        <li class="gzwm">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </li>
+                        <li class="gzwm-01">
+                            <a href="#"></a>
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="appo"></li>
+            </ul>
+            <div id="zcfw">
+                <div>
+                    <img src="imgs/f_qy.jpg" width="100px" height="36px" />
+                </div>
+                <div>
+                    <p>2004-2017 © 穷游网™ qyer.com All rights reserved.
+                        京ICP备12003524号  京公网安备11010502023470
+                    </p>
+                    <p>
+                        穷游网为旅行者提供原创实用的出境游旅行指南和旅游攻略、
+                        旅行社区和问答交流平台，
+                        并提供签证、保险、机票、酒店预订、租车等服务。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script>
+        var s1=document.getElementById("delu");
+        var p1=document.getElementById("delu-01");
+        s1.onclick=function(){
+            var pps=document.getElementById("dlform");
+            var ppt=document.getElementById("dlform-01");
+            pps.style.display="block";
+            s1.style.color="#3F9F5F";
+            s1.style.borderBottom="2px solid #3F9F5F";
+            ppt.style.display="none";
+            p1.style.color="black";
+            p1.style.borderBottom="2px solid #E8E8E8"
+
+        };
+        p1.onclick=function(){
+            var all=document.getElementById("dlform-01");
+            var att= document.getElementById("dlform");
+            all.style.display="block";
+            p1.style.color="#3F9F5F";
+            p1.style.borderBottom="2px solid #3F9F5F";
+            att.style.display="none";
+            s1.style.color="black";
+            s1.style.borderBottom="2px solid #E8E8E8"
+        };
+
+                $("#s01").blur(function(check){  //用户名
+                    var $txtName=$("#s01");
+                    var $s1=$("#s01").val();
+                    var zz =/^[A-Za-z0-9_\-\u4e00-\u9fa5]{3,15}$/;
+                    if(!zz.test($s1)){
+                        $txtName.next().html("<img src='imgs/err.png'>&nbsp;请输入正确的手机号/邮箱/用户名");
+                        $txtName.next().css("visibility","visible");
+                        $("#s01").css("background","none");
+                        check.preventDefault();
+                    }
+                    else{
+                       $("#s01").css("background","url('imgs/ok.png') 308px 11px no-repeat");
+                        $txtName.next().css("visibility","hidden");
+                    }
+                });
+
+
+
+
+        $("#s02").blur(function(){  //手机
+            var $txtName=$("#s02");
+            var $s1=$("#s02").val();
+            var zz =/^1[3,5,7,8]\d{9}$/;
+            if(!zz.test($s1)){
+                $txtName.next().html("<img src='imgs/err.png'>&nbsp;请输入正确的手机号码");
+                $txtName.next().css("visibility","visible");
+                $("#s02").css("background","none");
+                check.preventDefault();
+            }
+            else{
+                $("#s02").css("background","url('imgs/ok.png') 221px 11px no-repeat");
+                $txtName.next().css("visibility","hidden");
+            }
+        });
+
+    </script>
+	<script>
+      $(window).load(function(){
+        alert("欢迎登录");
+        $("#btn").on("click",function(){
+            //5:验证通过
+            //6:ajax post /login.do
+            var u = $("#s01").val();
+            var p = $("#s001").val();
+            $.ajax({
+                type:"POST",
+                url:"/login.do",
+                data:{s01:u,s001:p},
+                success:function(data){
+                    if(data.code>0){
+                        alert(data.msg);
+                        //alert('网络故障，请尝试再次登录');
+                       //sessionStorage.setItem("uid",data.uname);//接受AJAX返回数据
+                       sessionStorage.setItem("uid",u);
+                       setTimeout(function(){
+                        location.href="index.html";
+                      },1000)
+                        }else{
+                        alert(data.msg);
+                    }
+                }
+            });
+        });
+      })
+
+        //跳转首页与AJAX验证如何实现？
+//      btn.onclick=function(){
+//            var u=s01.value;
+//           var p=s001.value;
+//           var xhr=new XMLHttpRequest();
+//     xhr.onreadystatechange = function(){
+//       if(xhr.readyState===4&&xhr.status===200){
+//           var html = xhr.responseText;
+//           alert(xhr.responseText)
+//       }
+//     };
+//            xhr.open("GET","login.php?s01="+u+"&s001="+p,true);
+//            xhr.send(null);
+//       };
+</script>
+</body>
+</html>
